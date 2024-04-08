@@ -1,0 +1,185 @@
+Time slot   0 
+ld_routine
+	Loaded a process at input/proc/swap1, PID: 1 PRIO: 138
+Time slot   1 
+	CPU 0: Dispatched process  1
+Time slot   2 
+Allocation for Process 1 - size needed 300
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 512
+00000000: 80000000
+00000004: 80000001
+print_list_vma: 
+va[0->512]
+
+print_list_rg: 
+rg[300->512]
+rg[0->0]
+
+Time slot   3 
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Allocation for Process 1 - size needed 300
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1024
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+print_list_vma: 
+va[0->1024]
+
+print_list_rg: 
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+Time slot   4 
+Free for Process 1: free range [0 -300]
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1024
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+print_list_vma: 
+va[0->1024]
+
+print_list_rg: 
+rg[0->300]
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+	Loaded a process at input/proc/swap2, PID: 2 PRIO: 139
+Time slot   5 
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Allocation for Process 2 - size needed 300
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 512
+00000000: 80000000
+00000004: 80000001
+print_list_vma: 
+va[0->512]
+
+print_list_rg: 
+rg[300->512]
+rg[0->0]
+
+Time slot   6 
+Allocation for Process 2 - size needed 300
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1024
+00000000: c0000040
+00000004: c0000060
+00000008: 80000000
+00000012: 80000001
+print_list_vma: 
+va[0->1024]
+
+print_list_rg: 
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+Time slot   7 
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  1
+Allocation for Process 1 - size needed 300
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1024
+00000000: c0000000
+00000004: c0000020
+00000008: 80000002
+00000012: 80000003
+print_list_vma: 
+va[0->1024]
+
+print_list_rg: 
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+Time slot   8 
+write region=0 offset=20 value=100
+print_pgtbl: 0 - 1024
+00000000: c0000000
+00000004: c0000020
+00000008: 80000002
+00000012: 80000003
+Segmentation Fault 
+Time slot   9 
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Segmentation Fault 
+read region=0 offset=20 value=-84
+print_pgtbl: 0 - 1024
+00000000: c0000000
+00000004: c0000020
+00000008: 80000002
+00000012: 80000003
+----------------MEMORY CONTENT-------------- 
+Address: Content 
+Time slot  10 
+Time slot  11 
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Free for Process 2: free range [0 -300]
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1024
+00000000: c0000040
+00000004: c0000060
+00000008: 80000000
+00000012: 80000001
+print_list_vma: 
+va[0->1024]
+
+print_list_rg: 
+rg[0->300]
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+Time slot  12 
+Allocation for Process 2 - size needed 400
+----------------PAGE TABLE AND FREE_RG LIST CONTENT-------------- 
+print_pgtbl: 0 - 1536
+00000000: c0000040
+00000004: c0000060
+00000008: c0000080
+00000012: c00000a0
+00000016: 80000000
+00000020: 80000001
+print_list_vma: 
+va[0->1536]
+
+print_list_rg: 
+rg[1424->1536]
+rg[0->300]
+rg[812->1024]
+rg[300->512]
+rg[0->0]
+
+Time slot  13 
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  1
+Time slot  14 
+Time slot  15 
+	CPU 0: Processed  1 has finished
+	CPU 0: Dispatched process  2
+write region=1 offset=20 value=102
+print_pgtbl: 0 - 1536
+00000000: c0000040
+00000004: c0000060
+00000008: c0000080
+00000012: c00000a0
+00000016: 80000000
+00000020: 80000001
+----------------MEMORY CONTENT-------------- 
+Address: Content 
+0x00000014: 00000066 
+Time slot  16 
+Time slot  17 
+	CPU 0: Processed  2 has finished
+	CPU 0 stopped
